@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Previwer</title>
+    <style>
+        body{
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Roboto, sans-serif;
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Roboto, sans-serif;
+            
+        }
+
+        #box-preview{
+            width: 100px;
+            height: 100px;
+            background-color: #6959CD;
+
+        }
+
+        .border{
+            display: block;
+            
+        }
+
+        form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 15px;
+        }
+
+        #cssResult{
+            width: 200px;
+            margin: 15px;
+            font-family: Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Border Radius Previwer</h1>
+
+        <form action="">
+            <label for="" class="border">Superior esquerdo: </label>
+            <input type="number" name="UpperLeft" id="UpperLeft"class="border" value="0" onchange="atualizarPreview();">
+            <label for="" class="border">Superior direito: </label>
+            <input type="number" name="UpperRight" id="UpperRight" class="border" value="0" onchange="atualizarPreview();">
+            <label for="" class="border">Inferior direito: </label>
+            <input type="number" name="BottomLeft" id="BottomLeft" class="border" value="0" onchange="atualizarPreview();">
+            <label for="" class="border">Inferior esquerdo: </label>
+            <input type="number" name="BottomRight" id="BottomRight" class="border" value="0" onchange="atualizarPreview();">
+        </form>
+
+        <input type="text" name="CSS" id="cssResult" class="border">
+
+        <div id="box-preview">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
